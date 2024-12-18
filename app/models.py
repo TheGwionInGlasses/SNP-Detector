@@ -65,7 +65,6 @@ class FileReader:
                 break
         return genomes
         
-        
 class ORF:
     """
     This is a model of an Open Reading Frame.
@@ -91,10 +90,10 @@ class ORF:
     def levenshtein_substitution_matrix(self, other_orf, insertion_penalty=1, deletion_penality=1, substituion_penalty=1):
         reference = self.sequence
         variance = other_orf.sequence
-        substitution_matrix = [[0 for _ in range(len(variance))] for _ in range(len(reference))]
+        substitution_matrix = [[0 for _ in range(len(variance)+1)] for _ in range(len(reference)+1)]
         
-        for i in range(len(reference)):
-            for j in range(len(variance)):
+        for i in range(len(reference)+1):
+            for j in range(len(variance)+1):
                 if i==j==0:
                     substitution_matrix[i][j] = 0
                 elif 1 <= j <= len(variance) and i==0:
@@ -111,33 +110,54 @@ class ORF:
     def find_snps(self, other_orf):
         sub_matrix = self.levenshtein_substitution_matrix(other_orf)
         snps = []
-        i = len(self.sequence)-1
-        j = len(other_orf.sequence)-1
-        while i != 0 and j != 0:
-            if j == 0:
-                snps.append([i, 'I', self.sequence[i-1]])
-                i -= 1
+        i = j = 0
+        print(sub_matrix)
+        while i < len(self.sequence) or j < len(other_orf.sequence):
+            if j == len(other_orf.sequence):
+                snps.append([i, 'D', self.sequence[i]])
+                i += 1
                 continue
-            if i == 0:
-                snps.append([i, 'D', other_orf.sequence[j-1]])
-                j -= 1
+            if i == len(self.sequence):
+                snps.append([i, 'I', other_orf.sequence[j]])
+                j += 1
                 continue
-            if sub_matrix[i][j] > sub_matrix[i-1][j-1]:
-                snps.append([i, 'S', other_orf.sequence[i-1]])
-                i -= 1
-                j -= 1
+            the_lowest_distance = min(sub_matrix[i+1][j+1], sub_matrix[i][j+1], sub_matrix[i+1][j])
+            if the_lowest_distance == sub_matrix[i+1][j+1]:
+                if sub_matrix[i][j] != sub_matrix[i+1][j+1]:
+                    snps.append([i+1, 'S', f"{self.sequence[i]}->{other_orf.sequence[j]}"])
+                    # Find out if snp synonamous and potentially harmful by using two helper functions. is_sub_nonsym and is_sub_on_wanted_list
+                i += 1
+                j += 1
                 continue
-            the_lowest_distance = min(sub_matrix[i-1][j-1], sub_matrix[i][j-1], sub_matrix[i-1][j])
-            if the_lowest_distance == sub_matrix[i-1][j-1]:
-                i -= 1
-                j -= 1
-            elif the_lowest_distance == sub_matrix[i][j-1]:
-                snps.append([i, 'I', other_orf.sequence[j-1]])
-                j -= 1
-            else:
-                snps.append(i, 'D', self.sequence[i-1])
-                i-= 1
+            if the_lowest_distance == sub_matrix[i][j+1]:
+                snps.append([i+1, 'I', other_orf.sequence[j]])
+                j += 1
+                continue
+            if the_lowest_distance == sub_matrix[i+1][j]:
+                snps.append([i+1, 'D', self.sequence[i]])
+                i += 1
+                continue
         return snps
+    
+    def get_amino_acid(self):
+        aa_sequence = ""
+        for i in range(0, len(self.sequence), 3):
+            codon = codon_table[self.sequence[i:i+3]]
+            if codon != '*':
+                aa_sequence += codon
+        return aa_sequence
+    
+class AminoAcidChain:
+    def __init__(self, acid_sequence="", orf=None):
+        if orf:
+            self.sequence = orf.get_amino_acid()
+        else:
+            self.sequence = acid_sequence
+            
+    def description(self):
+        description = (f"This amino acid chain is {len(self.sequence)} acids long.\n"
+                       f"Sequence: {self.sequence}")
+        return description
     
 class Sequence:
     """
