@@ -1,0 +1,134 @@
+Reference Longest ORF: ATGGTGCATCTGACTCCTGAGGAGAAGTCTGCCGTTACTGCCCTGTGGGGCAAGGTGAACGTGGATGAAGTTGGTGGTGAGGCCCTGGGCAGGCTGCTGGTGGTCTACCCTTGGACCCAGAGGTTCTTTGAGTCCTTTGGGGATCTGTCCACTCCTGATGCTGTTATGGGCAACCCTAAGGTGAAGGCTCATGGCAAGAAAGTGCTCGGTGCCTTTAGTGATGGCCTGGCTCACCTGGACAACCTCAAGGGCACCTTTGCCACACTGAGTGAGCTGCACTGTGACAAGCTGCACGTGGATCCTGAGAACTTCAGGCTCCTGGGCAACGTGCTGGTCTGTGTGCTGGCCCATCACTTTGGCAAAGAATTCACCCCACCAGTGCAGGCTGCCTATCAGAAAGTGGTGGCTGGTGTGGCTAATGCCCTGGCCCACAAGTATCACTAA
+Reference Length: 444 bases
+Reference Start Index: 50
+Reference End Index: 493
+
+Reference Amino Acid Sequence:
+MVHLTPEEKSAVTALWGKVNVDEVGGEALGRLLVVYPWTQRFFESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATLSELHCDKLHVDPENFRLLGNVLVCVLAHHFGKEFTPPVQAAYQKVVAGVANALAHKYH*
+
+Variation Amino Acid Sequence:
+MVIS*SKEFFAESVICGSRMRDAARCDATGTLRVVVHRTLRCTDYAGPSFCLVSLRIKTKLKGLANNAPRAFRDRLRSLVNLNGTSATLSELRFQHLHTGF*NLRLLAHSLTRVLAA*FGKIVVPLPQKPEQKYVAALAHVSTHSHPQ
+
+Synonymous SNPs (Position: Reference Codon -> Variation Codon -> Amino Acid):
+Position 4: GTG -> GTA -> V
+Position 82: GCC -> GCA -> A
+Position 88: GGC -> GGG -> G
+Position 103: GTC -> GTT -> V
+Position 121: AGG -> CGT -> R
+Position 178: AAG -> AAA -> K
+Position 184: AAG -> AAA -> K
+Position 214: TTT -> TTC -> F
+Position 220: GAT -> GAC -> D
+Position 226: CTG -> TTA -> L
+Position 250: GGC -> GGG -> G
+Position 259: GCC -> GCG -> A
+Position 265: CTG -> TTG -> L
+Position 271: GAG -> GAA -> E
+Position 289: CTG -> CTA -> L
+Position 307: AAC -> AAT -> N
+Position 316: CTC -> CTG -> L
+Position 331: CTG -> CTT -> L
+Position 355: TTT -> TTC -> F
+Position 382: CAG -> CAA -> Q
+Position 430: CAC -> CAT -> H
+
+
+High Impact Nonsynonymous SNPs (Position: Reference Codon -> Variation Codon -> Amino Acid -> Variation Amino Acid):
+Position 7: CAT -> ATT -> H -> I
+Position 10: CTG -> AGT -> L -> S
+Position 13: ACT -> TAG -> T -> *
+Position 16: CCT -> TCG -> P -> S
+Position 28: TCT -> TTC -> S -> F
+Position 46: TGG -> TGC -> W -> C
+Position 58: AAC -> ATG -> N -> M
+Position 85: CTG -> ACG -> L -> T
+Position 106: TAC -> GTT -> Y -> V
+Position 109: CCT -> CAT -> P -> H
+Position 118: CAG -> CTG -> Q -> L
+Position 124: TTC -> TGC -> F -> C
+Position 127: TTT -> ACT -> F -> T
+Position 145: CTG -> TCG -> L -> S
+Position 148: TCC -> TTC -> S -> F
+Position 160: GCT -> TCT -> A -> S
+Position 175: CCT -> ACT -> P -> T
+Position 190: CAT -> CTA -> H -> L
+Position 256: TTT -> TCT -> F -> S
+Position 280: TGT -> TTC -> C -> F
+Position 295: GTG -> ACG -> V -> T
+Position 304: GAG -> TAA -> E -> *
+Position 328: GTG -> TCT -> V -> S
+Position 334: GTC -> ACG -> V -> T
+Position 349: CAT -> GCC -> H -> A
+Position 352: CAC -> TAG -> H -> *
+Position 370: ACC -> GTG -> T -> V
+Position 400: GTG -> TAC -> V -> Y
+Position 424: CTG -> AGT -> L -> S
+Position 427: GCC -> ACC -> A -> T
+Position 439: CAC -> CCT -> H -> P
+Position 442: TAA -> CAA -> * -> Q
+
+Low Impact Nonsynonymous SNPs (Position: Reference Codon -> Variation Codon -> Amino Acid -> Variation Amino Acid):
+Position 19: GAG -> AAG -> E -> K
+Position 25: AAG -> TTC -> K -> F
+Position 34: GTT -> GAA -> V -> E
+Position 37: ACT -> AGC -> T -> S
+Position 40: GCC -> GTA -> A -> V
+Position 43: CTG -> ATT -> L -> I
+Position 52: AAG -> TCC -> K -> S
+Position 55: GTG -> CGG -> V -> R
+Position 61: GTG -> AGG -> V -> R
+Position 67: GAA -> GCA -> E -> A
+Position 70: GTT -> GCT -> V -> A
+Position 73: GGT -> CGT -> G -> R
+Position 76: GGT -> TGT -> G -> C
+Position 79: GAG -> GAT -> E -> D
+Position 91: AGG -> ACC -> R -> T
+Position 97: CTG -> CGC -> L -> R
+Position 112: TGG -> AGA -> W -> R
+Position 130: GAG -> GAC -> E -> D
+Position 133: TCC -> TAC -> S -> Y
+Position 136: TTT -> GCC -> F -> A
+Position 142: GAT -> CCA -> D -> P
+Position 151: ACT -> TGT -> T -> C
+Position 154: CCT -> CTT -> P -> L
+Position 157: GAT -> GTA -> D -> V
+Position 163: GTT -> CTT -> V -> L
+Position 166: ATG -> AGG -> M -> R
+Position 169: GGC -> ATT -> G -> I
+Position 172: AAC -> AAG -> N -> K
+Position 181: GTG -> CTG -> V -> L
+Position 187: GCT -> GGG -> A -> G
+Position 193: GGC -> GCC -> G -> A
+Position 196: AAG -> AAT -> K -> N
+Position 199: AAA -> AAT -> K -> N
+Position 202: GTG -> GCG -> V -> A
+Position 205: CTC -> CCC -> L -> P
+Position 208: GGT -> AGG -> G -> R
+Position 217: AGT -> AGA -> S -> R
+Position 223: GGC -> CGC -> G -> R
+Position 229: GCT -> CGT -> A -> R
+Position 232: CAC -> AGC -> H -> S
+Position 238: GAC -> GTC -> D -> V
+Position 247: AAG -> AAT -> K -> N
+Position 277: CAC -> CGA -> H -> R
+Position 283: GAC -> CAG -> D -> Q
+Position 286: AAG -> CAT -> K -> H
+Position 298: GAT -> GGC -> D -> G
+Position 301: CCT -> TTT -> P -> F
+Position 310: TTC -> CTG -> F -> L
+Position 322: GGC -> GCC -> G -> A
+Position 325: AAC -> CAT -> N -> H
+Position 337: TGT -> AGA -> C -> R
+Position 364: GAA -> ATC -> E -> I
+Position 367: TTC -> GTG -> F -> V
+Position 376: CCA -> TTG -> P -> L
+Position 379: GTG -> CCG -> V -> P
+Position 385: GCT -> AAG -> A -> K
+Position 388: GCC -> CCT -> A -> P
+Position 391: TAT -> GAG -> Y -> E
+Position 409: GGT -> GCG -> G -> A
+Position 412: GTG -> CTT -> V -> L
+Position 418: AAT -> CAT -> N -> H
+Position 421: GCC -> GTC -> A -> V
+Position 433: AAG -> TCA -> K -> S
+Position 436: TAT -> CAC -> Y -> H
